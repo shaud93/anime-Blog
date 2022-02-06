@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>all tags</title>
+</head>
+<body style="background-color: lightblue;">
+    <p style="text-align: center;">
+        <section style="text-align: center; padding-left: 3vw; font-size: 5vh;">ALL TAGS</section> <br> <br>
+    <ul style="text-align: center; list-style-position: inside; font-size: 3vh;">
+        {%for i in t%}
+
+            <li><a href="/tag/{{i.id}}"> {{i.name}}</a></li>
+            
+        {%endfor%}
+    </ul>
+        <a href="/tag/create" style="padding-left: 45vw;"><button class="E_button">CREATE TAG</button></a> <br> <br>
+        <a href="/" style="padding-left: 45vw;"><button type="submit" class="D_button">HOME</button></a>
+    </p>
+</body>
+</html>

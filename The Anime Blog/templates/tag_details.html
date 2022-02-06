@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>TAG DETAILS</title>
+</head>
+<body style="background-color: lightblue;">
+    
+    <div style="width: 20vw; padding-left: 35vw; text-align: center; list-style-position:inside;">
+        <h1 style="padding-left: 2vw; font-size: 5vh;">{{tg.name}}</h1>
+
+        
+        <ul style="font-size: 3vh; color: blue;">
+            {%for i in tg.pt%}
+                <li>{{i.p.title}}</li>
+            {%endfor%}
+        </ul>
+        <a href="/tag/{{tg.id}}/edit"><button type="submit" style="background-color: blue; width: 10vw; height: 5vh; float: left; color: white;">EDIT</button></a>
+        <form action="/tag/{{tg.id}}" method="post"><button type="submit" style="background-color: red; width: 10vw; height: 5vh; float: right; color: white;">DELETE</button></form>
+        <a href="/"><button type="submit" style="background-color: red; width: 10vw; height: 5vh; color: white; clear: both;">HOME</button></a>
+    </div>
+
+</body>
+</html>

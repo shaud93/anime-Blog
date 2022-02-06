@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Post</title>
+</head>
+<body style="background-color:lightblue;">
+    
+    
+    <form action="/user/{{u.id}}/post" method="post" class="form_post">
+        <h1>MAKE YOUR POST</h1>
+        <input type="text" style="width: 25vw;" name="Title" placeholder="Title"><br>
+        <input type="text" style="width: 25vw; height: 5vw;" name="Content" placeholder="Body"><br> <br>
+        <h1>PICK YOUR TAGS</h1>
+        {%for i in range(0,list)%}
+        
+        <input type="checkbox" name="T{{i}}">
+        <label for="T{{i}}"> {{t[i].name}}</label><br>
+        <input type="hidden" name="T{{i}}">
+        {%endfor%}
+        <button type="submit" class="D_button">SUBMIT</button><br><br> <br> <br>
+        
+    </form>
+    
+        <a href="/" style="text-align: center; padding-left: 43.4vw;"><button type="submit" class="H_button">HOME</button></a>
+    
+</body>
+</html>

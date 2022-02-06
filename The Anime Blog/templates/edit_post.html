@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Edit_Post</title>
+</head>
+<body style="background-color: lightblue;">
+    <form action="/user/{{u.id}}/post/{{p.id}}/edit" method="post" class="form_post">
+        <h1>EDIT YOUR POST</h1>
+        <input type="text" style="width: 25vw;" name="Title" placeholder="{{p.title}}"><br>
+        <input type="text" style="width: 25vw; height: 5vw;" name="Content" placeholder="{{p.content}}"><br> <br>
+        <button type="submit" class="D_button">SUBMIT</button><br><br> <br> <br>
+        
+    </form>
+    
+        <a href="/" style="text-align: center; padding-left: 43.4vw;"><button type="submit" class="H_button">HOME</button></a>
+</body>
+</html>

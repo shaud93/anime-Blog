@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>User_details</title>
+</head>
+<body style="background-color: lightblue;">
+    <div style="float: left;" class="Content_div">
+        <h1 class="Profile_name">{{u.first_name}} {{u.last_name}}</h1>
+
+        <img src="{{u.image}}" alt="/static/images/broken_link.jpg" style="width: 25vw; height: 50vh;">
+
+        <p>
+            <a href="/user/{{u.id}}/edit" style="float: left;"> <button type="submit" class="E_button">EDIT</button></a>
+            <form action="/user/{{u.id}}" method="post" style="float: right;">
+                <button type="submit" class="D_button">DELETE</button>
+            </form>
+        </p> 
+    </div>
+
+
+    <div class="post_title">
+       <h1 class="Profile_name">POSTS</h1> <br>
+       
+       <ol style="font-size: 3vh;">
+           
+           {%for i in u.p%} 
+           <a href="/user/{{u.id}}/post/{{i.id}}"><li>{{i.title}}</li> <br></a>
+           {%endfor%}
+       </ol>
+
+       <p>
+            <a href="/user/{{u.id}}/post" style="text-align: center;"><button class="E_button">POST</button></a>
+            
+        </p>
+    </div> 
+
+        <p style="clear: both; padding-top: 10vh;">
+
+            <a href="/"><button type="submit" class="E_button">HOME</button></a>
+        </p>
+  
+        
+</body>
+</html>

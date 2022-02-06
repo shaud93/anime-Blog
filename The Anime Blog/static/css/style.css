@@ -1,0 +1,59 @@
+.E_button
+{
+    background-color: blue;
+    color: white;
+    width: 12.5vw;
+    height: 4vh;
+}
+
+.D_button
+{
+    background-color: red;
+    color: white;
+    width: 12.5vw;
+    height: 4vh;
+}
+
+.Profile_name
+{
+    text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    width: 25vw;
+    
+    font-size: 5vh;
+}
+
+.Content_div {
+    padding-right: 2vw;
+    width:25vw;
+  }
+
+.form_post
+{
+    text-align: center;
+    padding-top: 25vh;
+    padding-bottom: 25vh;
+}
+
+.H_button
+{
+    background-color: blue;
+    color: white;
+    width: 12.5vw;
+    height: 4vh;
+    
+}
+
+.post_title
+{
+    float: left;
+    text-align: center; 
+    height: 50vh;
+    width:25vw;
+    
+}
+.center 
+{
+    text-align: center;
+    list-style-position: inside;
+  }
